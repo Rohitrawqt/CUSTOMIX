@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customix Editor</title>
+  <link rel="stylesheet" href="customization.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header>
+    <h1>Customix Editor</h1>
+    <p>Welcome to Customix Editor - Customize your product your way!</p>
+  </header>
+
+  <div class="main-container">
+    <!-- Tool Section -->
+    <aside class="tool-section">
+      <h3>Tools</h3>
+      <button id="addTextBtn"><i class="fas fa-font"></i> Add Text</button>
+      <button id="uploadImageBtn"><i class="fas fa-upload"></i> Upload Image</button>
+      <button id="textFontBtn"><i class="fas fa-text-height"></i> Text Fonts</button>
+      <label for="colorPicker"><i class="fas fa-palette"></i> Pick Text Color:</label>
+      <input type="color" id="colorPicker" value="#000000">
+
+      <div id="layerSection" class="layer-section">
+        <h4>Layers</h4>
+        <ul id="layerList"></ul>
+      </div>
+    </aside>
+
+    <!-- Canvas Section -->
+    <section id="canvas-container">
+      <canvas id="mainCanvas" width="400" height="400"></canvas>
+    </section>
+
+    <!-- Preview Section -->
+    <aside id="previewSection">
+      <h3>Live Preview</h3>
+      <canvas id="previewCanvas" width="300" height="300"></canvas>
+    </aside>
+  </div>
+
+  <!-- Toolbar (Floating inside Canvas) -->
+  <div id="toolbar">
+    <button id="deleteBtn"><i class="fas fa-trash"></i></button>
+    <button id="copyBtn"><i class="fas fa-copy"></i></button>
+    <button id="forwardBtn"><i class="fas fa-arrow-up"></i></button>
+    <button id="backwardBtn"><i class="fas fa-arrow-down"></i></button>
+  </div>
+
+  
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.2.4/fabric.min.js"></script>
+  <script src="customization.js"></script>
+</body>
+</html>
